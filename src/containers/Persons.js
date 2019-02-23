@@ -25,18 +25,18 @@ class Persons extends Component {
 
 const mapStateToProps = (state) =>{
     return {
-        peopleArr: state.persons
+        peopleArr: state.persons // como yo lo entiendo: peopleArr ahora es un "prop" de Persons.js
     }
 } // paso 3.2.1 (suscripciones --> state alterando componentes)
 
 const mapDispatchToProps = (dispatch) =>{
     return {
-        createPerson: () => {
+        createPerson: () => { // como yo lo entiendo: createPersons ahora es un "prop" de Persons.js
             return dispatch({
                 type:'ADD'
             })
         },
-        deletePerson: (id) => {
+        deletePerson: (id) => { // como yo lo entiendo: deletePerson ahora es un "prop" de Persons.js
             return dispatch({
                 type:'DELETE',
                 personId: id
